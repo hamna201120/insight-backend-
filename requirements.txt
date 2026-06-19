@@ -14,14 +14,13 @@ yt-dlp==2023.11.14
 ffmpeg-python==0.2.0
 youtube-transcript-api==0.6.1
 
-# ⭐ WHISPER & DEPENDENCIES
+# ⭐ WHISPER DEPENDENCIES
 openai-whisper==20231117
 tiktoken==0.5.2
 regex==2023.12.25
-numba==0.58.1
 
-# ⭐ GEMINI API (ZAROORI!)
-google-generativeai==0.8.3
+# ⭐ GEMINI (REMOVE FROM HERE - INSTALL IN BUILD SCRIPT)
+# google-generativeai==0.8.3   <-- COMMENT OUT OR REMOVE!
 
 # CORS & Environment
 python-dotenv==1.0.0

@@ -14,8 +14,5 @@ yt-dlp==2023.11.14
 ffmpeg-python==0.2.0
 youtube-transcript-api==0.6.1
 
-# ⭐ WHISPER DEPENDENCIES
-numba==0.58.1
-
 # CORS & Environment
 python-dotenv==1.0.0

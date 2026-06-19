@@ -4,6 +4,8 @@ uvicorn[standard]==0.24.0
 sqlmodel==0.0.14
 sqlalchemy==2.0.23
 
+numba==0.58.1
+
 # Authentication
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4

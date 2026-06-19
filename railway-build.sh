@@ -8,11 +8,14 @@ apt-get install -y ffmpeg
 echo "🚀 Installing Python build tools..."
 pip install --upgrade pip setuptools wheel
 
-echo "🚀 Installing numpy first..."
+echo "🚀 Installing numpy..."
 pip install numpy==1.24.3 --no-cache-dir
 
 echo "🚀 Installing numba (required for whisper)..."
 pip install numba==0.58.1 --no-cache-dir
+
+echo "🚀 Installing CPU PyTorch..."
+pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu --no-cache-dir
 
 echo "🚀 Installing tiktoken and regex..."
 pip install tiktoken==0.5.2 regex==2023.12.25 --no-cache-dir

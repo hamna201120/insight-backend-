@@ -1,5 +1,5 @@
-# ⚠️ CRITICAL: Build tools pehle!
-setuptools>=65.0.0
+# ⚠️ CRITICAL: setuptools FIRST!
+setuptools==65.5.0
 wheel>=0.38.0
 
 # FastAPI & Database

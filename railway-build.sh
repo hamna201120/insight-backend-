@@ -26,13 +26,6 @@ pip install openai-whisper --no-deps
 echo "📦 Installing Google Generative AI..."
 pip install google-generativeai==0.8.6 --no-cache-dir
 
-# ⭐ CRITICAL: Pin transformers & sentence-transformers for PyTorch 2.0.1
-echo "📦 Installing transformers (compatible with PyTorch 2.0.1)..."
-pip install transformers==4.30.0 --no-cache-dir
-
-echo "📦 Installing sentence-transformers (compatible with PyTorch 2.0.1)..."
-pip install sentence-transformers==2.2.0 --no-cache-dir
-
 echo "📦 Installing remaining requirements..."
 pip install -r requirements.txt --no-cache-dir
 

@@ -9,8 +9,7 @@ python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-multipart==0.0.6
 
-# Whisper & Audio Processing
-openai-whisper==20231117
+# YouTube (NO WHISPER HERE!)
 yt-dlp==2023.11.14
 ffmpeg-python==0.2.0
 youtube-transcript-api==0.6.1
@@ -18,8 +17,8 @@ youtube-transcript-api==0.6.1
 # CORS & Environment
 python-dotenv==1.0.0
 
-# ⭐ GEMINI API (ZAROORI!)
+# ⭐ GEMINI API
 google-generativeai==0.8.6
 
-# ⭐ ONLY ESSENTIAL ML (NO TRANSFORMERS!)
+# ⭐ ONLY ESSENTIAL
 numpy>=1.21.0

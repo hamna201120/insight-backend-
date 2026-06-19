@@ -21,7 +21,9 @@ echo "📦 Installing openai-whisper (WITHOUT dependencies)..."
 pip install openai-whisper --no-deps
 
 echo "📦 Installing Google Generative AI..."
-pip install google-generativeai==0.8.6 --no-cache-dir
+pip install google-genai --no-cache-dir
+
+pip install transformers sentence-transformers
 
 echo "📦 Installing remaining requirements..."
 pip install -r requirements.txt --no-cache-dir

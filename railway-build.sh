@@ -17,6 +17,8 @@ pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu --no-c
 echo "📦 Installing openai-whisper (WITHOUT dependencies)..."
 pip install openai-whisper --no-deps
 
+pip install google-generativeai==0.8.3
+
 echo "📦 Installing remaining requirements..."
 pip install -r requirements.txt --no-cache-dir
 

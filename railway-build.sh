@@ -12,7 +12,7 @@ pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt --no-cache-dir
 
 # Install Gemini separately
-pip install google-generativeai==0.8.3 --no-cache-dir
+pip install google-generativeai==0.8.6 --no-cache-dir
 
 echo "🎤 Pre-downloading Whisper model..."
 python -c "import whisper; whisper.load_model('tiny')"

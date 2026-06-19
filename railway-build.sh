@@ -11,6 +11,9 @@ pip install --upgrade pip setuptools wheel
 # Install everything in one go
 pip install -r requirements.txt --no-cache-dir
 
+# ⭐ Install Whisper WITHOUT dependencies (dependencies already in requirements.txt)
+pip install openai-whisper --no-deps
+
 # Install Gemini separately
 pip install google-generativeai==0.8.6 --no-cache-dir
 

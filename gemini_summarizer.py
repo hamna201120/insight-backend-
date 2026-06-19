@@ -1,6 +1,6 @@
-# gemini_summarizer.py - Gemini 2.5 Models (FIXED)
+# gemini_summarizer.py - Gemini 2.5 Models (FIXED INDENTATION)
 import os
-import google.generativeai as genai
+from google import genai
 from typing import List, Dict, Optional
 import time
 import json
@@ -49,7 +49,7 @@ class GeminiSummarizer:
             return False
         
         try:
-            # ✅ NEW SDK: Use genai.Client
+            # NEW SDK: Use genai.Client
             self.client = genai.Client(api_key=key)
             self.current_key = key
             print(f"✅ Gemini 2.5 Flash initialized with key: {key[:10]}...")
@@ -277,7 +277,7 @@ Format as valid JSON only. No other text."""
                         print("🚨 No Gemini keys available! Using BART fallback...")
                         return self._use_bart_fallback(transcript, duration_minutes)
                 
-                # ✅ NEW SDK: Use client.models.generate_content
+                # Use Gemini 2.5 Flash
                 response = self.client.models.generate_content(
                     model='gemini-2.5-flash',
                     contents=prompt,

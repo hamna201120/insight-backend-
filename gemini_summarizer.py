@@ -1,6 +1,6 @@
 # gemini_summarizer.py - Gemini 2.5 Models (FIXED)
 import os
-import google.generativeai as genai  # ✅ FIXED IMPORT
+import google.generativeai as genai
 from typing import List, Dict, Optional
 import time
 import json
@@ -49,11 +49,10 @@ class GeminiSummarizer:
             return False
         
         try:
-            # ✅ FIXED: Configure Gemini properly
-            genai.configure(api_key=key)
-            self.client = genai.GenerativeModel('gemini-1.5-flash')
+            # ✅ NEW SDK: Use genai.Client
+            self.client = genai.Client(api_key=key)
             self.current_key = key
-            print(f"✅ Gemini 1.5 Flash initialized with key: {key[:10]}...")
+            print(f"✅ Gemini 2.5 Flash initialized with key: {key[:10]}...")
             return True
         except Exception as e:
             print(f"❌ Failed to initialize with key {key[:10]}...: {e}")
@@ -278,10 +277,11 @@ Format as valid JSON only. No other text."""
                         print("🚨 No Gemini keys available! Using BART fallback...")
                         return self._use_bart_fallback(transcript, duration_minutes)
                 
-                # ✅ FIXED: Generate content with Gemini
-                response = self.client.generate_content(
-                    prompt,
-                    generation_config={
+                # ✅ NEW SDK: Use client.models.generate_content
+                response = self.client.models.generate_content(
+                    model='gemini-2.5-flash',
+                    contents=prompt,
+                    config={
                         'temperature': 0.3,
                         'top_p': 0.8,
                         'top_k': 40,
@@ -290,13 +290,13 @@ Format as valid JSON only. No other text."""
                 )
                 
                 result = self._parse_response(response.text)
-                result['ai_model_used'] = 'Gemini 1.5 Flash'
-                result['processing_method'] = 'gemini_1_5_flash'
+                result['ai_model_used'] = 'Gemini 2.5 Flash'
+                result['processing_method'] = 'gemini_2_5_flash'
                 result['video_length_minutes'] = duration_minutes
                 result['key_used'] = self.current_key[:10] + '...' if self.current_key else 'Unknown'
                 result['attempt'] = attempt + 1
                 
-                print(f"✅ Gemini 1.5 Flash successful! (Key: {self.current_key[:10]}...)")
+                print(f"✅ Gemini 2.5 Flash successful! (Key: {self.current_key[:10]}...)")
                 return result
                 
             except Exception as e:

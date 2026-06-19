@@ -4,27 +4,27 @@ uvicorn[standard]==0.24.0
 sqlmodel==0.0.14
 sqlalchemy==2.0.23
 
-numba==0.58.1
-
 # Authentication
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-multipart==0.0.6
 
-# YouTube
+# YouTube & Audio Processing
 yt-dlp==2023.11.14
 ffmpeg-python==0.2.0
 youtube-transcript-api==0.6.1
 
-# ⭐ Whisper Dependencies
+# ⭐ WHISPER & DEPENDENCIES
+openai-whisper==20231117
 tiktoken==0.5.2
 regex==2023.12.25
+numba==0.58.1
+
+# ⭐ GEMINI API (ZAROORI!)
+google-generativeai==0.8.3
 
 # CORS & Environment
 python-dotenv==1.0.0
-
-# Gemini API
-google-generativeai>=0.3.0
 
 # Utilities
 numpy>=1.21.0

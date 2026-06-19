@@ -9,10 +9,14 @@ python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-multipart==0.0.6
 
-# YouTube (NO WHISPER HERE!)
+# YouTube
 yt-dlp==2023.11.14
 ffmpeg-python==0.2.0
 youtube-transcript-api==0.6.1
+
+# ⭐ Whisper Dependencies
+tiktoken==0.5.2
+regex==2023.12.25
 
 # CORS & Environment
 python-dotenv==1.0.0

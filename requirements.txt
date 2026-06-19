@@ -20,7 +20,7 @@ tiktoken==0.5.2
 regex==2023.12.25
 
 # ⭐ GEMINI (REMOVE FROM HERE - INSTALL IN BUILD SCRIPT)
-# google-generativeai==0.8.3   <-- COMMENT OUT OR REMOVE!
+google-generativeai==0.8.6   
 
 # CORS & Environment
 python-dotenv==1.0.0
